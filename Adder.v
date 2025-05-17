@@ -1,11 +1,22 @@
-// ID
+// 112550179
 module Adder(
-    src1_i,
+	src1_i,
 	src2_i,
 	sum_o
 	);
+     
+// I/O ports
+input  [32-1:0]  src1_i;
+input  [32-1:0]	 src2_i;
 
-// TO DO
+output [32-1:0]	 sum_o;
 
+// Internal Signals
+wire [32-1:0]	result;
+
+// Main function
+assign result = $signed(src1_i) + $signed(src2_i);//signed??
+assign sum_o = result;
+ 
 
 endmodule                  
